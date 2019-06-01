@@ -1,0 +1,21 @@
+body {
+    background-image: url("http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-color: black;
+}
+
+.crystals{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgb(125, 206, 233);
+    align-items: center;
+}
+
+.crystal{
+    border: 2px solid palevioletred;
+    height: 200px;
+    width: 200px;
+}
+
