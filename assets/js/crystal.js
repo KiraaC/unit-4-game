@@ -3,13 +3,32 @@ var lose = 0;
 var score = 0;
 var targetScore = 0;
 
-function getRandom(min, max){
+function getRandom(min, max) {
     var randomNum = Math.floor(Math.random() * max) + min;
     return randomNum
 }
 
+function checkGameStatus() {
+    console.log("score",score)
+    $("#score").text(score)
+    console.log("targetScore", targetScore)
+    $("#targetScore").text(target)
+    if (score > targetScore) {  // lose condition
+        alert('You Lose :(')
+        lose = lose + 1
+        $("#losses").text(lose)
+        score = 0
+    }
+
+    if (score === targetScore) {
+        alert('You Win!')
+        win = win + 1
+        $("#wins").text(win)
+        score = 0
+    }
+}
+
 var randomCrystalNum = getRandom(1, 10)
-// console.log(randomCrystalNum)
 
 var crystal = {
     blue: {
@@ -34,82 +53,29 @@ crystal.blue = getRandom(1, 12)
 crystal.pink = getRandom(1, 12)
 crystal.purple = getRandom(1, 12)
 crystal.red = getRandom(1, 12)
-targetScore = getRandom(1,12)
-// console.log(crystal.red)
-// console.log(crystal.pink)
-// console.log(crystal.purple)
-// console.log(crystal.blue)
-// console.log(targetScore)
 
-$("#blue").click(function(){
-    // console.log("blue's been clicked");
-});
-$("#pink").click(function(){
-    // console.log("pink's been clicked");
-});
-$("#purple").click(function(){
-    // console.log("purple's been clicked");
-});
-$("#red").click(function(){
-    // console.log("red's been clicked");
+targetScore = getRandom(19, 120)
+
+$("#blue").click(function () {
+    score = score + crystal.blue;
+    checkGameStatus()
 });
 
+$("#pink").click(function () {
+    score = score + crystal.pink;
+    checkGameStatus()
+});
 
+$("#purple").click(function () {
+    score = score + crystal.purple;
+    checkGameStatus()
+});
 
-
-// psydocode 
-// make 4 crystals and a random result
-// every crystal should have a number between 1- 12
-// The random number shown at the start of the game should be between 19 - 120.
-// a new number should generate everytime we win or lose
-// the crsytal shoud add the prevoius result until it equals the random result
-
-
-// random number score
-
-// random number crystal code
-
-
-
-// var purplecrystal = random_crystal(1, 12);
-// var pinkcrystal = random_crystal(1, 12);
-// var bluecrystal = random_crystal(1, 12);
-// var redcrystal = random_crystal(1, 12);
+$("#red").click(function () {
+    score = score + crystal.red;
+    checkGameStatus()
+});
 
 
 
 
-
-
-
-
-
-
-
-
-// $("#result").html('Random Result: ' + random_result);
-// example $("#wins").html(wins)
-
-
-// for (var i = 0; i < 4; i++) {
-
-//     var crystal = $("<div>");
-// }
-
-
-
-
-//     console.log(previous);
-
-//         losses++;
-
-//         $("#losses").html("You losses: " + losses);
-
-//     }
-//     else if (previous === random_result) {
-//         win++;
-//         $("#wins").html("You wins: " + win);
-//       
-//     }
-
-// });

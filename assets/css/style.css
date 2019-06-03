@@ -6,16 +6,27 @@ body {
     background-color: black;
 }
 
-.crystals{
-    display: flex;
+p {
+    font-family: 'Courgette', cursive;
+    font-size: 24px;
+    color: white;
+}
+
+h1{
+    font-family: 'Courgette', cursive;
+    color: white;
+}
+
+.crystalspace {
+    display:flex;
     justify-content: space-around;
-    border: 1px solid rgb(125, 206, 233);
+    border: 2px solid rgb(125, 206, 233);
     align-items: center;
 }
 
-.crystal{
-    border: 2px solid palevioletred;
-    height: 200px;
-    width: 200px;
+.rules{
+    font-family: 'Courgette', cursive;
+    font-size: 24px;
+    color: rgb(49, 6, 88)
 }
 
