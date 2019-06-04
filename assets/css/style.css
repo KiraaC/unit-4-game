@@ -2,8 +2,7 @@ body {
     background-image: url("http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
     background-repeat: no-repeat;
     background-position: right top;
-    background-attachment: fixed;
-    background-color: black;
+    background-attachment: absolute;
 }
 
 p {
@@ -20,13 +19,12 @@ h1{
 .crystalspace {
     display:flex;
     justify-content: space-around;
-    border: 2px solid rgb(125, 206, 233);
+    border: 2px solid rgb(228, 38, 212);
     align-items: center;
 }
 
 .rules{
     font-family: 'Courgette', cursive;
     font-size: 24px;
-    color: rgb(49, 6, 88)
+    color: rgb(97, 3, 54)
 }
-

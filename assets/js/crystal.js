@@ -9,10 +9,9 @@ function getRandom(min, max) {
 }
 
 function checkGameStatus() {
-    console.log("score",score)
+    // console.log("score",score) [run above]
     $("#score").text(score)
-    console.log("targetScore", targetScore)
-    $("#targetScore").text(target)
+
     if (score > targetScore) {  // lose condition
         alert('You Lose :(')
         lose = lose + 1
@@ -55,6 +54,9 @@ crystal.purple = getRandom(1, 12)
 crystal.red = getRandom(1, 12)
 
 targetScore = getRandom(19, 120)
+
+// render
+$("#target").text(targetScore)
 
 $("#blue").click(function () {
     score = score + crystal.blue;
