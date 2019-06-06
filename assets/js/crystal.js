@@ -17,6 +17,14 @@ function checkGameStatus() {
         lose = lose + 1
         $("#losses").text(lose)
         score = 0
+        // add code that reset the crystal value and the target score
+        crystal.blue = getRandom(1, 12)
+        crystal.pink = getRandom(1, 12)
+        crystal.purple = getRandom(1, 12)
+        crystal.red = getRandom(1, 12)
+        targetScore = getRandom(100, 225); 
+        $("#target").text(targetScore)
+
     }
 
     if (score === targetScore) {
@@ -24,6 +32,13 @@ function checkGameStatus() {
         win = win + 1
         $("#wins").text(win)
         score = 0
+        // add code that reset the crystal value and the target score
+        crystal.blue = getRandom(1, 12)
+        crystal.pink = getRandom(1, 12)
+        crystal.purple = getRandom(1, 12)
+        crystal.red = getRandom(1, 12)
+        targetScore = getRandom(100, 225); 
+        $("#target").text(targetScore)
     }
 }
 
