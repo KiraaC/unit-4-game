@@ -3,13 +3,33 @@ var lose = 0;
 var score = 0;
 var targetScore = 0;
 
-function getRandom(min, max){
+function getRandom(min, max) {
     var randomNum = Math.floor(Math.random() * max) + min;
     return randomNum
 }
 
 var randomCrystalNum = getRandom(1, 10)
 // console.log(randomCrystalNum)
+function checkGameStatus() {
+    // console.log("score",score) [run above]
+    $("#score").text(score)
+
+    if (score > targetScore) {  // lose condition
+        alert('You Lose :(')
+        lose = lose + 1
+        $("#losses").text(lose)
+        score = 0
+    }
+
+    if (score === targetScore) {
+        alert('You Win!')
+        win = win + 1
+        $("#wins").text(win)
+        score = 0
+    }
+}
+
+var randomCrystalNum = getRandom(1, 10)
 
 var crystal = {
     blue: {
@@ -56,60 +76,31 @@ $("#red").click(function(){
 
 
 
+targetScore = getRandom(19, 120)
 
-// psydocode 
-// make 4 crystals and a random result
-// every crystal should have a number between 1- 12
-// The random number shown at the start of the game should be between 19 - 120.
-// a new number should generate everytime we win or lose
-// the crsytal shoud add the prevoius result until it equals the random result
+// render
+$("#target").text(targetScore)
 
+$("#blue").click(function () {
+    score = score + crystal.blue;
+    checkGameStatus()
+});
 
-// random number score
+$("#pink").click(function () {
+    score = score + crystal.pink;
+    checkGameStatus()
+});
 
-// random number crystal code
+$("#purple").click(function () {
+    score = score + crystal.purple;
+    checkGameStatus()
+});
 
-
-
-// var purplecrystal = random_crystal(1, 12);
-// var pinkcrystal = random_crystal(1, 12);
-// var bluecrystal = random_crystal(1, 12);
-// var redcrystal = random_crystal(1, 12);
-
-
-
-
-
-
-
+$("#red").click(function () {
+    score = score + crystal.red;
+    checkGameStatus()
+});
 
 
 
 
-
-// $("#result").html('Random Result: ' + random_result);
-// example $("#wins").html(wins)
-
-
-// for (var i = 0; i < 4; i++) {
-
-//     var crystal = $("<div>");
-// }
-
-
-
-
-//     console.log(previous);
-
-//         losses++;
-
-//         $("#losses").html("You losses: " + losses);
-
-//     }
-//     else if (previous === random_result) {
-//         win++;
-//         $("#wins").html("You wins: " + win);
-//       
-//     }
-
-// });

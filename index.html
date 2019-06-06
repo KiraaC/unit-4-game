@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chenla&display=swap" rel="stylesheet">
     <title>Crystal Game</title>
+
     <!-- links to jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -23,10 +26,17 @@
 
     <h1>Crystal Game</h1>
 
-    <p id="result"></p>
+    <p>Wins: <span id="wins"></span></p>
+    <p>Losses: <span id="losses"></span></p>
+    <p>Target Score: <span id="target"></span></p>
+    <p>Score: <span id="score"></span></p>
 
-    <div class="crystals">
-
+    <!-- <p id="result"></p> -->
+    <div class="crystalspace">
+        <img id="blue" src="assets/image/bluecrystal.png " height="150" width="150" alt="blue">
+        <img id="pink" src="assets/image/pinkcrystal.png" height="150" width="150" alt="pink">
+        <img id="purple" src="assets/image/purplecrystal.png" height="150" width="150" alt="purple">
+        <img id="red" src="assets/image/redcrystal.png" height="150" width="150" alt="red">
     </div>
 
     <p id="wins">Wins</p>
@@ -39,6 +49,14 @@
     <img id="purple" src="assets/image/purplecrystal.png" height="150" width="150" alt="purple">
     <img id="red" src="assets/image/redcrystal.png" height="150" width="150" alt="red">
 
+    <div class="rules">
+        <br>The Rules of the Game:
+        <br>The crystals and score number will generate at random.
+        <br> Match the points to the score number to get a win.
+        <br>Go over the score number and you will lose.
+        <br>Click on any of the crystals to play!
+
+    </div>
     <script src="./assets/js/crystal.js"></script>
 </body>
 

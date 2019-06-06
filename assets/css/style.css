@@ -2,21 +2,35 @@ body {
     background-image: url("http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
     background-repeat: no-repeat;
     background-position: right top;
+<<<<<<< HEAD
     background-attachment: fixed;
     background-color: black;
     font
+=======
+    background-attachment: absolute;
+>>>>>>> 5062aa25518f6428543a3c939f4ddd9728276930
 }
 
-.crystals{
-    display: flex;
+p {
+    font-family: 'Courgette', cursive;
+    font-size: 24px;
+    color: white;
+}
+
+h1{
+    font-family: 'Courgette', cursive;
+    color: white;
+}
+
+.crystalspace {
+    display:flex;
     justify-content: space-around;
-    border: 1px solid rgb(125, 206, 233);
+    border: 2px solid rgb(228, 38, 212);
     align-items: center;
 }
 
-.crystal{
-    border: 2px solid palevioletred;
-    height: 200px;
-    width: 200px;
+.rules{
+    font-family: 'Courgette', cursive;
+    font-size: 24px;
+    color: rgb(97, 3, 54)
 }
-
