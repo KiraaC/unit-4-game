@@ -8,6 +8,8 @@ function getRandom(min, max) {
     return randomNum
 }
 
+var randomCrystalNum = getRandom(1, 10)
+// console.log(randomCrystalNum)
 function checkGameStatus() {
     // console.log("score",score) [run above]
     $("#score").text(score)
@@ -67,6 +69,27 @@ crystal.blue = getRandom(1, 12)
 crystal.pink = getRandom(1, 12)
 crystal.purple = getRandom(1, 12)
 crystal.red = getRandom(1, 12)
+targetScore = getRandom(1,12)
+// console.log(crystal.red)
+// console.log(crystal.pink)
+// console.log(crystal.purple)
+// console.log(crystal.blue)
+// console.log(targetScore)
+
+$("#blue").click(function(){
+    // console.log("blue's been clicked");
+});
+$("#pink").click(function(){
+    // console.log("pink's been clicked");
+});
+$("#purple").click(function(){
+    // console.log("purple's been clicked");
+});
+$("#red").click(function(){
+    // console.log("red's been clicked");
+});
+
+
 
 targetScore = getRandom(19, 120)
 
