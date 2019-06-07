@@ -26,7 +26,6 @@ function checkGameStatus() {
         crystal.red = getRandom(1, 12)
         targetScore = getRandom(100, 225); 
         $("#target").text(targetScore)
-
     }
 
     if (score === targetScore) {
@@ -88,8 +87,6 @@ $("#purple").click(function(){
 $("#red").click(function(){
     // console.log("red's been clicked");
 });
-
-
 
 targetScore = getRandom(19, 120)
 
